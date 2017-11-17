@@ -35,14 +35,14 @@ for (var i = 0; i < cart.length; i++) {
   arr.push(Object.keys(cart[i])[0] + " " + "at" + " " +"$"+ (cart[i][xyz[i]]) );
 }
 if (cart.length == 1) {
-console.log(`${p} ${arr}.`);
+  console.log(`${p} ${arr}.`);
 } else if (cart.length == 2) {
-console.log(`${p} ${arr.join(" and ")}.`);
-} else if (cart.length >= 3){
-var lastProduct = arr.pop();
-var output = arr.join(', ') + ',' + ' and ' + lastProduct;
-console.log(`${p} ${output}.`);
-}
+  console.log(`${p} ${arr.join(" and ")}.`);
+} else if (cart.length >= 3) {
+    var lastProduct = arr.pop();
+    var output = arr.join(', ') + ',' + ' and ' + lastProduct;
+    console.log(`${p} ${output}.`);
+  }
 }
 }
 
