@@ -68,16 +68,16 @@ function removeFromCart(item) {
   var cart = getCart();
   for (var key in cart) {
   var subCart = cart[key];
-    for (var subKey in subCart) {
-	    if (subCart.hasOwnProperty(subKey) && item === subKey){
-	 	  cart.splice(key, 1);
- 		  console.log (cart);
-      getCart();
+  for (var subKey in subCart) {
+	  if (subCart.hasOwnProperty(subKey) && item === subKey){
+	 	   cart.splice(key, 1);
+ 		    console.log (cart);
+        getCart();
 		}
+  }
+  } if(item !== subKey){
+        console.log ("That item is not in your cart.");
     }
-} if(item !== subKey){
-  console.log ("That item is not in your cart.");
-}
 }
 
 function placeOrder(cardNumber) {
