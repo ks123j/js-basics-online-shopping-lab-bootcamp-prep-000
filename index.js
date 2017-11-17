@@ -47,21 +47,21 @@ function viewCart() {
 }
 
 function total() {
- var cart = getCart();
- var arr = [];
- var xyz = [];
- for(var key in cart) {
-   if (cart.hasOwnProperty(key)) {
-     xyz.push(Object.keys(cart[key])[0]);
-   }
- }
- for (var i = 0; i < cart.length; i++) {
-   arr.push(cart[i][xyz[i]] );
- }
- var total = 0;
- for(var i in arr) {
-   total += arr[i];
- } return (total);
+var cart = getCart();
+var arr = [];
+var xyz = [];
+for(var key in cart) {
+  if (cart.hasOwnProperty(key)) {
+    xyz.push(Object.keys(cart[key])[0]);
+  }
+}
+for (var i = 0; i < cart.length; i++) {
+  arr.push(cart[i][xyz[i]] );
+}
+var total = 0;
+for(var i in arr) {
+  total += arr[i];
+} return (total);
 }
 
 function removeFromCart(item) {
