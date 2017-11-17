@@ -10,40 +10,40 @@ function setCart(c) {
 }
 
 function addToCart(item) {
-var itemPrice = Math.floor(Math.random() * (100 - 1) + 1);
-var product = {[item]: itemPrice};
-var cart = getCart();
-cart.push(product);
-console.log(`${item} has been added to your cart.`);
-return cart;
+  var itemPrice = Math.floor(Math.random() * (100 - 1) + 1);
+  var product = {[item]: itemPrice};
+  var cart = getCart();
+  cart.push(product);
+  console.log(`${item} has been added to your cart.`);
+  return cart;
 }
 
 function viewCart() {
-if(getCart().length === 0) {
-  console.log("Your shopping cart is empty.");
-} else {
-var cart = getCart();
-var p = "In your cart, you have";
-var arr = [];
-var xyz = [];
-for(var key in cart) {
-  if (cart.hasOwnProperty(key)) {
-    xyz.push(Object.keys(cart[key])[0]);
-  }
-}
-for (var i = 0; i < cart.length; i++) {
-  arr.push(Object.keys(cart[i])[0] + " " + "at" + " " +"$"+ (cart[i][xyz[i]]) );
-}
-if (cart.length == 1) {
-  console.log(`${p} ${arr}.`);
-} else if (cart.length == 2) {
-  console.log(`${p} ${arr.join(" and ")}.`);
-} else if (cart.length >= 3) {
-    var lastProduct = arr.pop();
-    var output = arr.join(', ') + ',' + ' and ' + lastProduct;
-    console.log(`${p} ${output}.`);
-  }
-}
+  if(getCart().length === 0) {
+    console.log("Your shopping cart is empty.");
+  } else {
+    var cart = getCart();
+    var p = "In your cart, you have";
+    var arr = [];
+    var xyz = [];
+    for(var key in cart) {
+      if (cart.hasOwnProperty(key)) {
+        xyz.push(Object.keys(cart[key])[0]);
+      }
+    }
+    for (var i = 0; i < cart.length; i++) {
+      arr.push(Object.keys(cart[i])[0] + " " + "at" + " " +"$"+ (cart[i][xyz[i]]) );
+    }
+    if (cart.length == 1) {
+      console.log(`${p} ${arr}.`);
+    } else if (cart.length == 2) {
+      console.log(`${p} ${arr.join(" and ")}.`);
+    } else if (cart.length >= 3) {
+      var lastProduct = arr.pop();
+      var output = arr.join(', ') + ',' + ' and ' + lastProduct;
+      console.log(`${p} ${output}.`);
+      }
+    }
 }
 
 function total() {
